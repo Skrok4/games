@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+a{
+	color: #283593;
+	text-decoration: none;
+}
+h3{
+	margin-top: 12px;
+}
+
+.slotMachine{
+	width: 100%;
+	background-image: radial-gradient( circle 860px at 11.8% 33.5%,  rgba(240,30,92,1) 0%, rgba(244,49,74,1) 30.5%, rgba(249,75,37,1) 56.1%, rgba(250,88,19,1) 75.6%, rgba(253,102,2,1) 100.2% );
+	padding: 20px 15px 20px 15px;
+  	position: relative;
+  	min-width: 850px;
+  	min-height: 520px;
+  	text-align: center;
+}
+
+
+.main{
+	margin:0px;
+	border-radius: 10px;
+	background-color: #f5e1c6;
+	margin-top: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: calc((100% - 580px) / 2);
+	width: 560px;
+}
+ #status{
+	margin-bottom: 25px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border-radius: 10px;
+	text-align: center;
+	background-color:#311d1c;
+	color: #FFFFFF;
+	font-size: 25px;
+
+}
+ #game{
+	margin-top: 25px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border-radius: 10px;
+	text-align: center;
+	background-color: #C62828;
+	color: #FFFFFF;
+	font-size: 25px;
+	cursor: pointer;
+}
+#game:hover{background-color: #ba1013;}
+ #playerScore{
+	margin-top: 20px;
+	border-radius: 10px;
+	background-color: #311d1c;
+	color: #FFFFFF;
+    text-align: center;
+    font-size: 2rem;
+	line-height: 1.5;
+}
+.option{
+	padding-left: 5px;
+}
+ #info{
+	background-color: #616161;
+	padding-left: 12px;
+	padding-bottom: 12px;
+	border-radius: 10px;
+	overflow: hidden;
+	animation-duration: 1s;
+	color: #BDBDBD;
+	margin-top: 50px;
+	margin-left: 30%;
+	margin-right: 30%;
+	display: none;
+}
+#Slots{
+	border-radius: 15px;
+	background-color: #fff7eb;
+}
+#slot1, #slot2, #slot3{
+	display: inline-block;
+	margin-top: 5px;
+	background-size: 170px;
+	width: 170px;
+	height: 170px;
+}
+#slot1{
+border-right-color: black;
+border-right-style: solid; 
+border-right-width: 3px; 
+margin-left: 10px;
+
+}
+ #slot2{
+	padding-left: 2px;
+	margin-right: -2px;
+} 
+#slot3{	
+	border-left-color: black;
+	border-left-style: solid; 
+	border-left-width: 3px; 
+	
+} 
+.a1{background-image: url("img/seven.jpg");}
+.a2{background-image: url("img/horseshoe.jpg");}
+.a3{background-image: url("img/apple.jpg");}
+.a4{background-image: url("img/cherry.jpg");}
+.a5{background-image: url("img/diamond.jpg");}
+.a6{background-image: url("img/lemon.jpg");}
+.a7{background-image: url("img/joker.jpg");}
+
+
+
+
+/* @media screen and (max-width:581px) {
+
+	#slot1, #slot2, #slot3{
+	display: inline-block;
+	margin-top: 5px;
+	background-size: 100px;
+	width: 100px;
+	height: 100px;
+	padding: -15px;
+	}
+}	 */

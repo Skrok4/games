@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<link rel="shortcut icon" href="img/icon.png"/>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" href="css/style.css"/>
+    <link rel = "stylesheet" href="MagicStyle.css"/>
+    <link rel = "stylesheet" href="CardStyle.css"/>
+    <link rel = "stylesheet" href="NumStyle.css"/>
+	<link rel = "stylesheet" href="SpinStyle.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Games</title> 
+  </head>
+<body>
+   
+
+<header class="header">
+ <div class="container">
+<nav class="nav">
+<div class="list">
+	<div> <div class="nav_link active" id="MagicBall" href="#" onclick="MagicBall()">Magic Ball</div></div>
+	<div> <div class="nav_link" href="#" id="NumberGame" onclick="NumberGame()">Number Game</div> </div>
+	<div> <div class="nav_link" href="#" id="CardGame" onclick="CardGame()">Blackjack</div></div>
+	<div> <div class="nav_link" href="#" id="SlotMachine" href="#" onclick="SlotMachine()">Slot Machine</div></div>
+	</div>
+</nav>
+ </div>
+</header>
+<!-- Magic Ball -->
+<div class="magicBall">
+
+      <div class="question">
+         <input type="text" class="text" id="ask" placeholder="Type here your question">
+      </div>
+      <div class="ball" id="ball">
+         <div class="prediction" id="prediction">
+            <p class="predictionLine">Ask the ball a question you are interested in</p>
+         </div>
+      </div>
+</div>
+
+<!-- Num Game -->
+<div class="numberGame">
+	<div class="hz">
+<button id="open_modal" onclick ="OpenClose()"> Choose your skin </button>
+	<div id="openModal" class="modal">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h3 class="modal-title">Choose your skin</h3>
+			  <button id="closefunc" class="close" onclick = "OpenClose();">×</button>
+			</div>
+			<div class="modal-body">    
+			  <div class="choose-box" id = "chooseBox">
+			  <p>MALE</p>
+			  <div class="choose-box-man">
+					<div class="first-man" id="firstMan"> <img src="img/1.png" alt="first-man"">  </div>
+					<div class="second-man"><img src="img/2.png" alt="second-man"> </div>
+					<div class="third-man"><img src="img/3.png" alt="third-man">  </div>
+					<div class="forth-man"><img src="img/4.png" alt="forth-man">  </div>
+				</div>
+				<p>FEMALE</p>
+				<div class="choose-box-wooman">
+					<div class="first-wooman"> <img src="img/(1).png" alt="first-wooman"> </div>
+					<div class="second-wooman"><img src="img/(2).png" alt="second-wooman"> </div>
+					<div class="third-wooman"><img src="img/(3).png" alt="third-wooman"> </div>
+					<div class="forth-wooman"><img src="img/(4).png" alt="forth-wooman"></div>
+			  </div>  
+			</div> 
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+  	<div>
+		<div class="content">
+		<div class = "game"> 
+	  	<div class="avatar" id="user"><img src="img/user.png" id ="check" alt="avatar"></div> 
+		  <div class="user_info">
+		  <div class="name" id="name-player">Your nickname: </div>
+		  <div class="scores" id="score1">Your score: 0</div>
+		  <div class="card" id="card-player">Current number of points:</div>
+		  </div>
+		</div>
+   
+	  	<div class="user_button">
+	  	<div class="vs"> <img src="img/vs.png" alt="vs">  </div>
+      <div class="game_btn"> <button class="avatarpl" id="avatarpl" onClick="rand();">PLAY</button>
+      <button class="avatarpl" id="avatarpl" onClick="resetGame();">RESET</button>
+		</div>
+    </div>
+	
+	  <div class="bot">  
+		  <div class="computer"> <img src="img/pc.png" alt="computer"></div>
+      <div class="bot_info"> 
+		  <div class="name" id="name-bot">Bot</div>
+		  <div class="scores" id="score2">Bot score: 0</div>
+		  <div class="card" id="card-bot">Current number of points:</div>
+	  </div></div>
+	  </div>
+	</div>
+</div>
+</div>
+<!-- Card Game -->
+   <div class="cardGame">
+      <div class="wrapper">
+         <div class="block" id >
+             <h2 class="user">User</h2>
+             <div class="sumScoreUser">0</div>
+             <div class="score"><img src="img/back.png" class="scoreUser" id ="scoreUser"></div>
+         </div>
+         <div class="start">
+             <div>Спроба <span class="attempt">1</span> з 3</div>
+             <button class="generate" id = "play">Generate</button>
+             <div class="popup-fade">
+                 <div class="popup">
+                     <a class="popup-close" href="#">x</a>
+                      <div class="Win" id="win"></div>
+                 </div>
+             </div>
+       
+         </div>
+         <div class="block block2">
+             <h2>Computer</h2>
+             <div class="sumScoreComputer">0</div>
+             <div class="score"><img src="img/back.png" class="scoreComputer" id ="scoreComputer"></div>
+         </div>
+     </div> 
+   </div>
+<!-- Slot Machine -->
+<div class="slotGame">
+<div class="slotMachine">	
+	<div class="main">
+		<div id="status">WELCOME!</div>
+		<div id="Slots">
+			<div id="slot1" class="a1"></div>
+			<div id="slot2" class="a1"></div>
+			<div id="slot3" class="a1"></div>
+		</div>
+		<div onclick="doSlot()" id="game">TAKE A SPIN!</div>
+		<div id="playerScore">
+		<p id="score"> Spins left: 10</br>
+		You won: 0 times</p>
+		</div>
+	</div>
+</div>
+</div>
+   <script src="jquery-3.6.0.min.js"></script>
+   <script src="script.js" defer></script>
+</body>
+</html>
